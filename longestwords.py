@@ -1,8 +1,7 @@
-import re
-infile = open("test.txt" , "r")
-outfile = open("Listoflongestwords.txt" , "w")
+infile = open("input.txt" , "r")
+outfile = open("longestword.txt" , "w")
 
-szavak = re.split(" " , infile)
+szavak = [y for x in infile.readlines() for y in x.split()]
 hossz = len(szavak[0])
 
 for i in szavak:
@@ -11,7 +10,7 @@ for i in szavak:
 
 for i in szavak:
     if(len(i) == hossz):
-        f.write(i , len(i))
+        print(i, len(i) , file=outfile)
 
 infile.close()
 outfile.close()
