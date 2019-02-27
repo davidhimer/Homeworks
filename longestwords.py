@@ -1,5 +1,4 @@
 import re
-
 infile = open("test.txt" , "r")
 outfile = open("Listoflongestwords.txt" , "w")
 
